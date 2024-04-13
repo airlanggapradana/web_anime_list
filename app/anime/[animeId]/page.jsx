@@ -16,37 +16,37 @@ const AnimeDetailFull = async ({ params }) => {
   const animeDetail = result.data;
 
   return (
-    <section className="flex min-h-screen items-center justify-center">
+    <section className="flex min-h-screen items-center justify-center pt-16 pb-14 md:pt-0 md:pb-0">
       <div className="container">
         <div className="w-full px-5">
-          <div className="max-w-4xl mx-auto p-4 border border-cyan-600 rounded-xl bg-slate-700">
+          <div className="max-w-4xl mx-auto p-4 border border-cyan-600 rounded-xl dark:bg-slate-700 bg-slate-50">
             <Link
               href="/"
               className="w-14 h-14 border-2 rounded-lg flex items-center justify-center mb-5 border-blue-500"
             >
-              <RiArrowLeftLine className="fill-slate-100" />
+              <RiArrowLeftLine className="dark:fill-slate-100 fill-slate-500" />
             </Link>
 
             <iframe
               src={animeDetail.trailer.embed_url}
               width={400}
               height={400}
-              className="w-full"
+              className="w-full rounded-xl shadow-sm"
             ></iframe>
 
             <div className="space-y-3 mt-3">
-              <h1 className="font-bold text-2xl leading-relaxed text-slate-100">
+              <h1 className="font-bold text-2xl leading-relaxed text-slate-700 dark:text-slate-100">
                 {animeDetail.title}
               </h1>
               {/* Anime Detail list start */}
               <div className="flex items-center gap-3">
                 <div className="p-2 border-2 border-blue-500 rounded-lg">
-                  <h2 className="font-medium text-sm text-slate-300">
+                  <h2 className="font-medium text-sm text-slate-500 dark:text-slate-300">
                     {animeDetail.duration}
                   </h2>
                 </div>
                 <div className="p-2 border-2 border-red-400 rounded-lg">
-                  <h2 className="font-medium text-sm text-slate-300">
+                  <h2 className="font-medium text-sm text-slate-500 dark:text-slate-300">
                     {animeDetail.rating}
                   </h2>
                 </div>
@@ -62,7 +62,7 @@ const AnimeDetailFull = async ({ params }) => {
                   <AccordionTrigger className="font-semibold text-lg">
                     Sinopsis Cerita
                   </AccordionTrigger>
-                  <AccordionContent className="font-medium text-base text-slate-300 tracking-wide leading-relaxed">
+                  <AccordionContent className="font-medium text-base text-slate-500 dark:text-slate-300 tracking-wide leading-relaxed">
                     {animeDetail.synopsis}
                   </AccordionContent>
                 </AccordionItem>
@@ -73,7 +73,7 @@ const AnimeDetailFull = async ({ params }) => {
                   <AccordionContent>
                     <div className="flex flex-col gap-1 mb-3">
                       <h2 className="font-medium text-base">Broadcasted on</h2>
-                      <span className="font-normal text-slate-300">
+                      <span className="font-normal text-slate-500 dark:text-slate-300">
                         {animeDetail.broadcast.day} {","}{" "}
                         {animeDetail.broadcast.time}
                         {", "}
@@ -82,13 +82,13 @@ const AnimeDetailFull = async ({ params }) => {
                     </div>
                     <div className="flex flex-col gap-1 mb-3">
                       <h2 className="font-medium text-base">Produced by</h2>
-                      <span className="font-normal text-slate-300">
+                      <span className="font-normal text-slate-500 dark:text-slate-300">
                         {animeDetail.producers[0].name}
                       </span>
                     </div>
                     <div className="flex flex-col gap-1">
                       <h2 className="font-medium text-base">Studios</h2>
-                      <span className="font-normal text-slate-300">
+                      <span className="font-normal text-slate-500 dark:text-slate-300">
                         {animeDetail.studios[0].name}
                       </span>
                     </div>

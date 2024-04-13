@@ -20,13 +20,13 @@ const SearchAnime = () => {
       className="w-full p-4 border border-slate-500 dark:border-blue-500 rounded-lg flex items-center gap-3"
     >
       <button type="submit" onClick={handleSearch}>
-        <RiSearchLine className="dark:fill-slate-100" />
+        <RiSearchLine className="dark:fill-slate-400" />
       </button>
       <input
         ref={keyword}
         type="search"
         placeholder="cari anime favoritmu disini..."
-        className="w-full outline-none bg-transparent dark:text-slate-100 dark:placeholder:text-slate-100"
+        className="w-full outline-none placeholder:font-medium bg-transparent dark:text-slate-100 dark:placeholder:text-slate-500"
       />
     </form>
   );
